@@ -42,6 +42,7 @@ app.put('/api/students/:id', (req, res) => {
     if(!stud) res.status(404).send('The student with given id is not found');
 
     stud.name = req.body.name;
+    stud.age = req.body.age;
     res.status(200).send('Update Successfully')
 });
 
